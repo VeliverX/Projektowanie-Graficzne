@@ -132,8 +132,16 @@
             graphics.strokeRect(x-20,y-20,40,40);
             }
             else{
-            graphics.fillCircle(x-20,y-20,40,40);
-            graphics.strokeCircle(x-20,y-20,40,40);
+                graphics.beginPath();
+				graphics.moveTo(x+20,y+20);
+				graphics.lineTo(x-25,y+20);
+				graphics.lineTo(x-50,y-5);
+				graphics.lineTo(x-25,y-30);
+				graphics.lineTo(x+20,y-30);
+				graphics.lineTo(x+45,y-5);
+				graphics.fill();
+				graphics.stroke();
+				graphics.closePath();
             }
             
 			
@@ -289,7 +297,7 @@
 <p><b>Tool:</b>
     <select id="toolChoice">
         <option value="0">Kwadrat</option>
-        <option value="1">Kolo</option>
+        <option value="1">Pięciokąt</option>
     </select>
 </p>
 <p><button onclick="init()">****** CLEAR ******</button></p>
