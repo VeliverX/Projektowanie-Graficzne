@@ -143,6 +143,11 @@
 				graphics.stroke();
 				graphics.closePath();
             }
+            else if (toolChoice == 2){
+                graphics.fillStyle = "white";
+                graphics.fillCircle(x-20,y-20,60);
+                graphics.strokeCirce(x-20,y-20,60);
+            }
             
 			
             
@@ -298,6 +303,7 @@
     <select id="toolChoice">
         <option value="0">Kwadrat</option>
         <option value="1">Pięciokąt</option>
+        <option value="2">Gumka</option>
     </select>
 </p>
 <p><button onclick="init()">****** CLEAR ******</button></p>
